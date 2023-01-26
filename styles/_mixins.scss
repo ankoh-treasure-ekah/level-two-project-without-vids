@@ -1,0 +1,14 @@
+@mixin display-element-flex($align){
+    display: flex;
+    align-items: $align;
+}
+@mixin container($width,$margin){
+    width: $width;
+    margin-left: $margin;
+}
+@mixin text-style($font-size,$font-weight){
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    
+}
