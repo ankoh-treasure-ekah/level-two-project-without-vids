@@ -1,0 +1,11 @@
+footer{
+    section.footer-upper{
+        @include container(80%,10%);
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 2%;
+        div.footer-elements{
+            width: 100%;
+        }
+    }
+}
