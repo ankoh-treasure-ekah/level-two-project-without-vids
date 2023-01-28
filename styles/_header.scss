@@ -1,6 +1,30 @@
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+@mixin padding($padTop: 80px, $padBot: 80px) {
+    padding-top: $padTop;
+    padding-bottom: $padBot;
+}
+
+.btn-default-round {
+    font-size: 22px;
+    padding: 15px 30px;
+    font-weight: 600;
+    border-radius: 26px;
+    line-height: 20px;
+    background: $color-orange;
+    text-transform: capitalize;
+    color: white;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &:hover {
+        background: $color-green;
+    }
 }
 
 .flex-container {
@@ -121,30 +145,31 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
         align-items: center;
 
+        h2 {
+            font-size: 2.5rem;
+        }
+
         h1 {
             font-size: 90px;
             text-align: center;
         }
+
+        .line {
+            background-color: $color-orange;
+            width: 90px;
+            height: 5px;
+            border-radius: 40px;
+            margin-top: 20px;
+        }
+
         p {
-            font-size: 18px;
-            padding: 5rem 12rem 3rem;
+            font-size: 21px;
+            padding: 2rem 12rem 5rem;
             text-align: center;
             z-index: 1;
+            line-height: 30px
         }
-        .btn-default-round {
-            font-size: 22px;
-            padding: 15px 30px;
-            font-weight: 600;
-            border-radius: 50px;
-            line-height: 20px;
-            background: $color-orange;
-            color: white;
-            border: none;
-            transition: all 0.5s ease;
-            &:hover {
-                background: $color-green;
-            }
-        }
+        
     }
 
     .slider-navigation {
@@ -153,6 +178,7 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
         justify-content: center;
         align-items: center; 
+        margin-top: 1.5rem;
 
         .nav-btn-slide {
             width: 12px;

@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./assets/images/house-logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>House renting system</title>
 
 </head>
@@ -67,6 +68,8 @@
             <video class="video-slide active" src="./assets/images/Cozy - 106674.mp4" autoplay muted loop></video>
             <video class="video-slide" src="./assets/images/Fireplace - 1971.mp4" autoplay muted loop></video>
             <video class="video-slide" src="./assets/images/Live Wallpaper - 112722.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="./assets/images/Water - 3967.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="./assets/images/1603987530-1-pixabay.mp4" autoplay muted loop></video>
             <div class="main-section-container flex-container">
                 <h2 class="section-one-para">
                     Good Service is our passion
@@ -74,6 +77,7 @@
                 <h1 class="landing-hero-header">
                     Awesome apartment Villa
                 </h1>
+                <div class="line"></div>
                 <p>No matter what the weather,
                      no matter what the situation
                       we are in, if we have the right perspective
@@ -83,45 +87,159 @@
                 </button>
             </div>
             <div class="slider-navigation">
-                <div class="nav-btn-slide active"></div>
+                <a href="#female"><div class="nav-btn-slide active"></div></a>
+                <a href="#barchelor"><div class="nav-btn-slide"></div></a>
+                <div class="nav-btn-slide"></div>
                 <div class="nav-btn-slide"></div>
                 <div class="nav-btn-slide"></div>
             </div>
         </section>
 
-        <section class="section-container-default section-two">
-            <div class="section-wrapper-two">
-                <div class="carousel-container flex-container">
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-four.png">
-                        garage</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-ten.png" alt="">
-                        office</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-seven.png" alt="">
-                        apartment</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-one.png" alt="">
-                        family house</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-eight.png" alt="">
-                        hall room</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-nine.png" alt="">
-                        warehouse</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-three.png" alt="">
-                        sublet</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-two.png" alt="">
-                        factory</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-three.png" alt="">
-                        bachelor mess</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-ten.png" alt="">
-                        female mess</div>
+        <section class="section-two">
+            <div class="section-container-default section-two-container">
+                <div class="section-wrapper-two flex-container">
+                    <h2 class="section-header">we offer</h2>
+                    <div class="carousel-container">
+                        <!-- <div class="btn-navigate left-navigate">
+                            <button><img src="./assets/images/angle.png" alt=""></button>
+                        </div> -->
+                        <div class="btn-navigate left-navigate">
+                            <button class="left-marketing-btn" id="left-marketing-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="carousel-box-wrapper flex-container">
+                            <div id="garage" class="boxes">
+                                <img src="./assets/images/category/category-four.png">
+                                garage</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-ten.png" alt="">
+                                office</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-seven.png" alt="">
+                                apartment</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-one.png" alt="">
+                                family house</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-eight.png" alt="">
+                                hall room</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-nine.png" alt="">
+                                warehouse</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-three.png" alt="">
+                                sublet</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-two.png" alt="">
+                                factory</div>
+                            <div id="barchelor" class="boxes">
+                                <img src="./assets/images/category/category-three.png" alt="">
+                                bachelor mess</div>
+                            <div id="female" class="boxes">
+                                <img src="./assets/images/category/category-ten.png" alt="">
+                                female mess</div>
+                        </div>
+                        <div class="btn-navigate right-navigate">
+                            <button class="right-marketing-btn" id="right-marketing-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- <div class="btn-navigate right-navigate">
+                            <button><img src="./assets/images/angle.png" alt=""></button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-three">
+            <div class="section-container-default section-three-container">
+                <div class="section-wrapper-three flex-container">
+                    <h2 class="section-header">For rates & Availability</h2>
+                    <h2 class="section-header section-describe">search your <span>house</span></h2>
+                    <div class="section-input-sort flex-container">
+                        <div class="input-container">
+                            <h3>living area</h3>
+                            <input placeholder="Where do you want to live?" type="text" class="sorts">
+                        </div>
+                        <div class="input-container">
+                            <h3>type</h3>
+                            <select>
+                                <option value="volvo">Apartments</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Single</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div class="input-container">
+                            <h3>price</h3>
+                            <input placeholder="min" type="number" class="sorts">
+                        </div>
+                        <div class="input-container">
+                            <h3>price</h3>
+                            <input placeholder="max" type="number" class="sorts">
+                        </div>
+                        <div class="input-container">
+                            <h3>for</h3>
+                            <select>
+                                <option value="family">Family</option>
+                                <option value="student">Student</option>
+                                <option value="single">Single</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn-default-round">check availability</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-four">
+            <div class="section-container-default section-four-container">
+                <div class="section-wrapper-four">
+                    <h2 class="section-header">about us</h2> 
+                    <h2 class="section-describe section-four-describe">WELCOME TO OUR HOUSE RENT COMPANY</h2>   
+                    <div class="about-content-container flex-container">
+                        <div class="about-content about-content-nav">
+                            <ul class="nav-tabs">
+                                <li class="list active"><a>about company</a></li>
+                                <li class="list"><a>Terms & Condition</a></li>
+                                <li class="list"><a>our speciality</a></li>
+                                <li class="list"><a>our speciality</a></li>
+                            </ul>
+                        </div>
+                        <div class="about-content flex-container">
+                            <div class="tab-items-text-content active">
+                                <span>Amorem ipsum dolor sit amet,
+                                     consectetur adipiscing elit.
+                                      Cras vitae nibh nisl. Cras etitikis
+                                       mauris egeth lorem ultricies ferme
+                                        is ntum a inti diam. Morbi mollis
+                                         pellden tesque offs aiug ueia nec
+                                         rhoncus. Nam ute ultricies. Cras
+                                          etitikis mauris eget lorem ultricies
+                                           ferme ntum a inti diam. Morbi mollis
+                                            pellen tesque offs aiug ueia nec
+                                             rhoncus. Nam ute ultricies.
+                                </span>
+                                <ul>
+                                    <li>Amorem ipsum dolor sit amet, consectetur</li>
+                                    <li>Cras etitikis mauris egeth lorem ultricies</li>
+                                    <li>Amorem ipsum dolor sit amet, consectetur</li>
+                                    <li>Cras etitikis mauris egeth lorem ultricies</li>
+                                    <li>Amorem ipsum dolor sit amet, consectetur</li>
+                                    <li>Cras etitikis mauris egeth lorem ultricies</li>
+                                </ul>
+                            </div>
+                            <div class="about-content-img">
+                                <img src="./assets/images/about-image.png" alt="house image">
+                            </div>
+                        </div>
+                    </div>         
                 </div>
             </div>
         </section>
