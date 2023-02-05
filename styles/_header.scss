@@ -10,6 +10,156 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: $padBot;
 }
 
+.progress-bar {
+    position: fixed;
+    height: 1vh;
+    width: 100%;
+    top: 0;
+
+    .filled {
+        width: 0;
+        height: 100%;
+        background: $color-green;
+    }
+}
+
+.message-displayer-login {
+    position: absolute;
+    top: -39px;
+    left: 0;
+    right: 0;
+    width: 300px;
+    background: $color-green;
+    text-align: center;
+    padding: 6px 4px;
+    // width: 50%
+    margin: 0 auto;
+    border-radius: 5px;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    span {
+        font-size: 20px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    &.active {
+        visibility: visible;
+        top: 30px;
+        opacity: 1;
+    }
+
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    // background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: rgba(52, 54, 66, 0.9);
+    z-index: 1100;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    div {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: $color-green;
+        // animation-name: ;
+    }
+
+    div.one {
+        // margin-bottom: 50px;
+        animation-name: mydivfirst;
+        animation-timing-function: ease;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    div.two {
+        animation-name: myseconddiv;
+        animation-timing-function: ease;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-delay: 0.5s;
+    }
+    div.three {
+        animation-name: mythirddiv;
+        animation-timing-function: ease;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-delay: 1s;
+    }
+    div.four {
+        animation-name: myfourthdiv;
+        animation-timing-function: ease;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-delay: 1.5s;
+    }
+    div.five {
+        animation-name: myfifthdiv;
+        animation-timing-function: ease;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-delay: 2s;
+    }
+
+    @keyframes mydivfirst {
+        from {margin-bottom: 50px;}
+        to {margin-bottom: 0px;}
+    }
+
+    @keyframes myseconddiv {
+        from {margin-bottom: 50px;}
+        to {margin-bottom: 0px;}
+    }
+    @keyframes mythirddiv {
+        from {margin-bottom: 50px;}
+        to {margin-bottom: 0px;}
+    }
+    @keyframes myfourthdiv {
+        from {margin-bottom: 50px;}
+        to {margin-bottom: 0px;}
+    }
+    @keyframes myfifthdiv {
+        from {margin-bottom: 50px;}
+        to {margin-bottom: 0px;}
+    }
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.square-btn {
+    padding: 12px 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: $color-orange;
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+}
+
 .btn-default-round {
     font-size: 22px;
     padding: 15px 30px;
@@ -47,7 +197,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-items {
         
-        li {
+        // display: ;
+        li.nav {
             display: inline-block;
             padding: 2rem;
             font-size: 1.6rem;
@@ -62,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
                 color: white;
     
                 &:hover {
-                    color: $color-green;
+                    color: $color-green !important;
                     
                 }
             }
@@ -71,14 +222,80 @@ h1, h2, h3, h4, h5, h6 {
 
 
     .site-account {
+        position: fixed;
+        right: 0;
+        top: 10vh;
+        background: rgba(0,0,0,0.6);
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 999;
+
+        .user-img {
+            height: 40px;
+            width: 40px;
+            background-color: grey;
+            border-radius: 50%;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .user-letter {
+                text-transform: uppercase;
+                font-size: 30px;
+                // transform: translateY(5px);
+            }
+
+            svg.remove {
+                display: none;
+            }
+        }
+
+
 
         svg {
-            fill: $color-orange;
+            fill: #fff;
             // transform: scale(0.3);
             height: 30px;
             width: 30px;
+            // position: absolute;
         }
+
+        &.active {
+            cursor: pointer;
+        }
+
         
+
+        &.active:hover .user-nav-drop{
+            clip-path: circle(150% at 0 50%);
+        }
+
+        &.active:hover .svg-user-drop {
+            transform: translateY(5px) rotateX(180deg);
+        }
+
+
+
+
+
+        .svg-user-drop {
+            fill: none;
+            width: 20px;
+            height: 20px;
+            transform: translateY(5px);
+            padding-left: 5px;
+            display: none;
+            transition: all 0.5s ease;
+        }
+
+        .svg-user-drop.active {
+            display: block;
+        }
+
+
         ul li {
             font-size: 1.3rem;
             text-transform: uppercase;
@@ -94,7 +311,60 @@ h1, h2, h3, h4, h5, h6 {
                 &:hover {
                     color: $color-orange
                 }
+
+                &.remove {
+                    display: none;
+                }
             }
+        }
+
+        .user-nav-drop {
+            position: absolute;
+            background: rgba(0,0,0,0.6);
+            top: 50px;
+            right: 50%;
+            // padding: 10px 80px 10px 10px;
+            border-radius: 5px;
+            border: none;
+            overflow: hidden;
+            clip-path: circle(0% at 0 50%);
+            transition: all 0.5s ease;
+            
+            li {
+                text-transform: none;
+                font-size: 15px;
+                font-family: 'Playfair Display', serif;
+                color: #fff;
+                // padding: 10px 8px;
+                // width: 100%;
+                border-bottom: 1px solid grey;
+                cursor: pointer;
+
+                span {
+                    padding: 10px 80px 10px 10px;
+                }
+
+                &:hover {
+                    background: rgba(0,0,0,0.8);
+                    color: $color-green;
+                }
+
+                a {
+                    text-decoration: none !important;
+                    padding-left: 0;
+                    color: inherit;
+
+                    &:hover {
+                        color: $color-green;
+                    }
+                }
+            }
+
+            // &.active {
+            //     visibility: visible;
+            //     opacity: 1;
+            // }
+
         }
 
     }
@@ -204,3 +474,317 @@ h1, h2, h3, h4, h5, h6 {
     
 
 }    
+
+/** drop down*///
+.drop-container {
+    position: relative;
+
+
+
+    .drop-item {
+        position: absolute;
+        padding-top: 15px;
+        visibility: hidden;
+        // opacity: 0;
+        transition: all 0.5s ease;
+        // top: 20px;
+        clip-path: circle(0% at 0 50%);
+
+        a {
+            font-size: 15px;
+            color: black !important;
+            // background: red;
+            padding: inherit;
+            transition: none !important;
+
+        }
+
+        li {
+            background-color: #fff;
+            color: black;
+            white-space: nowrap;
+            list-style-type: none;
+            font-size: 15px;
+            padding: 15px 28px 15px 19px;
+            border: 1px solid grey;
+            border-radius: 0 20px 20px 20px;
+            border: none;
+
+            &:hover {
+                background-color: rgba(0,0,0,0.6);
+                color: $color-green !important;
+            }
+
+            // &:hover a {
+            //     color: $color-green;
+            // }
+
+            
+        }
+        
+    }
+
+    &:hover .drop-item{
+        // background-color: red;
+        visibility: visible;
+        // opacity: 1;
+        // top: 40px;
+        clip-path: circle(150% at 0 50%);
+    }
+}
+
+.login-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 5%;
+    z-index: 999;
+    background: rgba(52, 54, 66, 0.9);
+    visibility: hidden;
+    opacity: 0;
+    clip-path: circle(0% at 0 50%);
+    transition: all 1s ease;
+    
+
+    .login-wrapper {
+        position: relative;
+        width: 90%;
+        max-width: 600px;
+        margin: 4em auto;
+
+        .login-closer {
+            background-image: url(../assets/images/cd-icon-close.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: -30px;
+            right: 0;
+            cursor: pointer;
+        }
+        
+      
+        .login-block {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            
+            .login-tab-controller {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #809191;
+               
+
+                button {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    padding: 20px 20px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    font-family: 'Poppins', serif;
+                    text-transform: capitalize;
+                    background-color: #809191;
+
+                    &:first-of-type.active {
+                        border-right: 1px solid grey;
+                        border-radius: 0 20px 20px 0;
+                        background-color: #fff;
+                    }
+
+                    &:last-of-type.active {
+                        border-left: 1px solid grey;
+                        border-radius: 20px 0px 0px 20px;
+                        background: #fff;
+                    }
+                }
+            }
+
+            .login-tabs {
+                 
+                form {
+                    padding: 40px;
+                    visibility: hidden;
+                    opacity: 0;
+                    display: none;
+                    transition: all 0.5s ease;
+
+                    p {
+                        margin-bottom: 30px;
+                    }
+
+                    p.filed {
+                        
+                        line-height: 1.975rem;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        // padding: 0px 20px 0px 50px;
+                        position: relative;
+                        // border-radius: 20px;
+
+                        .error-message {
+                            position: absolute;
+                            left: -10px;
+                            top: 45px;
+                            font-size: 15px;
+                            // font-family: 'Poppins', serif;
+                            background-color: rgba(215, 102, 102, 0.8);
+                            padding: 15px 30px;
+                            border-radius: 10px;
+                            z-index: 888;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: all 0.5s ease;
+
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                left: 28px;
+                                bottom: 100%;
+                                // width: 10px;
+                                // background-color:5px solid transparent;
+                                border-left: 8px solid transparent;
+                                border-right: 8px solid transparent;
+                                border-bottom: 8px solid rgba(215, 102, 102, 0.8);
+
+                            }
+
+                            &.active {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+
+                        label {
+                            position: absolute;
+                            // left: 0px;
+                            background-image: url(../assets/images/cd-icon-email.svg);
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            width: 50px;
+                            height: 20px;
+                        }
+
+                        .img-password {
+                            background-image: url(../assets/images/cd-icon-password.svg);
+                        }
+
+                        .img-username {
+                            background-image: url(../assets/images/cd-icon-username.svg);
+                        }
+
+                        input {
+                            // padding: 20px;
+                            // border: none;
+                            padding: 20px 20px 20px 60px;
+                            width: 100%;
+                            font-size: 18px;
+                            outline: none;
+                            border: 1px solid #d2d8d8;
+                            border-radius: 5px;
+
+                            &::-webkit-input-placeholder {
+                                font-size: 18px;
+                            }
+                        }
+
+                        .password-toggle {
+                            position: absolute;
+                            // top: 20;
+                            right: 0;
+                            padding: 8px;
+                            font-size: 15px;
+                            font-family: 'Poppins', serif;
+                            background: none;
+                            border: none;
+                            border-left: 1px solid #d2d8d8;
+                            cursor: pointer;
+                        }
+
+                        input.btn-signin {
+                            padding: 12px 20px 12px 20px;   
+                            background: linear-gradient(to right, #21b75f 0%,#31386e 100%);
+                            cursor: pointer;
+                            color: #fff;
+                    
+                        }
+
+                        input.btn-register {
+                            padding: 12px 20px 12px 20px;   
+                            background: linear-gradient(to right, #21b75f 0%,#31386e 100%);
+                            cursor: pointer;
+                            color: #fff;
+                    
+                        }
+
+
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                    }
+
+                    p.filedset-aside {
+
+                        span {
+                            color: $color-orange;
+                            text-transform: capitalize;
+                            font-weight: 600;
+                        }
+                        
+                        label {
+                            font-size: 15px;
+                            margin-left: 6px;
+                        }
+
+                        
+                    }
+
+                    .pass-forgot-filed {
+                        position: absolute;
+                        bottom: -28px;
+                        left: 38%;
+                        cursor: pointer;
+
+                        a {
+                            font-size: 15px;
+                            color: #fff;
+                            font-family: 'Poppins', serif;
+                        }
+
+                    }
+
+
+                    &.active {
+                        visibility: visible;
+                        opacity: 1;
+                        height: auto;
+                        display: block;
+                    }
+                }
+
+
+            }
+
+        }
+
+    }
+}
+
+.login-container.active {
+    visibility: visible;
+    opacity: 1;
+    clip-path: circle(150% at 0 50%);
+}
+

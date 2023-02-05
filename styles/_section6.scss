@@ -1,0 +1,27 @@
+.counter-section {
+    background-image: url(../assets/images/count-down-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.section-counter-wrapper {
+    justify-content: space-around;
+    padding: 10rem 0;
+
+    h3 {
+        font-size: 7rem;
+        color: #fff;
+        font-family: 'Poppins', serif;
+        font-weight: 600;
+
+    }
+
+    div {
+        font-size: 4rem;
+        font-weight: 600;
+        color: #fff;
+        text-transform: capitalize;
+    }
+}
