@@ -2,9 +2,13 @@
 @import "_variables";
 @import './mixins';
 @import "_header";
+@import "./dashboard/_header";
+@import "./apartment/_header";
 @import "_section2";
 @import "_section3";
 @import "_section4";
+@import "_section6";
+@import "_footer";
 
 @import './billy-styles/main';
 @import './billy-styles/footer';

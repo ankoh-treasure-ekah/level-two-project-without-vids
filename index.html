@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="./styles/style.css">
     <!-- <link rel="stylesheet" href="./styles/plugins.css"> -->
     <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
@@ -14,56 +16,171 @@
 
 </head>
 <body>
-    <div class="body-container">
+    <div class="body-container">   
         <header class="header section-class">
             <nav class="nav-container">
                 <div class="header-logo">
-                    <a href="#">
+                    <a href="./index.html">
                         <img src="./assets/images/logo.png" alt="house logo">
                     </a>
                 </div>
                 <ul class="nav-items">
-                    <li class="nav-btn">
+                    <li class="nav nav-btn">
                         <a href="#">Home</a>
                     </li>
-                    <li class="nav-btn">
+                    <li class="nav nav-btn">
                         <a href="#">Booking</a>
                     </li>
-                    <li class="drop-container">
+                    <li class="nav drop-container">
                         <a class="nav-buttons Pages">
                             <span>Pages</span>
                             <img src="./assets/images/angle.png" alt="arrow-down">
                         </a>
+                        <ul class="drop-item pages-drop-item">
+                            <li>our galery</li>
+                            <li>coming soon</li>
+                        </ul>
 
                     </li>
-                    <li class="drop-container">
+                    <li class="nav drop-container">
                         <a class="nav-buttons House">
                             <span>House</span>
                             <img src="./assets/images/angle.png" alt="arrow-down">
                         </a>
+                        <ul class="drop-item house-drop-item">
+                            <li><a href="./apartment.html">all apartments</a></li>
+                            <li>apartments single</li>
+                        </ul>
 
                     </li>
-                    <li class="nav-btn">
+                    <li class="nav nav-btn">
                         <a href="#">About</a>
                     </li>
-                    <li class="nav-btn">
+                    <li class="nav nav-btn">
                         <a href="#">Contact</a>
                     </li>
                 </ul>
                 <div class="site-account">
                     <ul>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                        <li class="nav">
+                            <div class="user-img">
+                                <svg class="svg-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                                </svg>
+                                <span class="user-letter"></span>
+                            </div>
+                            <ul class="user-nav-drop">
+                                <li class="dashboard"><a href="./dashboard.html"><span>Dashboard</span></a></li>
+                                <li class="Favorites"><span>Favorites</span></li>
+                                <li class="logout"><span>Sign out</span></li>
+                            </ul>
+                            <svg class="svg-user-drop" role="img" width="12" height="10" viewBox="0 0 18 10" fill="none" stroke-width="1" stroke="#555" xmlns="http://www.w3.org/2000/svg">
+                                <g><title></title><path d="M1 1L9 9L17 1" stroke="white" stroke-width="2"></path></g>
                             </svg>
-                            <a href="#">login / register</a>
+                            <a class="btn-login-register" href="#">login / register</a>
                         </li>
                     </ul>
+
                 </div>
 
             </nav>
         </header>
+        <div class="message-displayer-login">
+            <span>Login successful</span>
+        </div>
+        <div class="loading-screen">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+        </div>
+        <div class="progress-bar">
+            <div class="filled"></div>
+        </div>
 
+        <div class="login-container">
+            <div class="login-wrapper">
+                <div class="login-closer">
+                </div>
+                <div class=" login-block">
+                    <div class="login-tab-controller">
+                        <button class="active btn-login">
+                            sign in
+                        </button>
+                        <button class="btn-sign-up">
+                            new account
+                        </button>
+                    </div>
+                    <div class="login-tabs">
+                        <form class="active login-form">
+                            <p class="filed">
+                                <label for="signin-email" class="img-email"></label>
+                                <input type="email" placeholder="E-mail" id="signin-email" class="sign-in-field">
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filed">
+                                <label for="signin-password" class="img-password"></label>
+                                <input placeholder="Password" type="password" class="password-filed-login" id="signin-password">
+                                <button class="password-toggle">show</button>
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filedset-aside">
+                                <input type="checkbox" class="remember-me" id="signin-remember-check">
+                                <label for="signin-remember-check">Remember me</label>
+                            </p>
+                            <p class="filed sign-in-btn">
+                                <input class="btn-signin" type="submit" value="Login">
+                            </p>
+                            <div class="pass-forgot-filed">
+                                <a>Forgot your password?</a>
+                            </div>
+                        </form>
+                        <form class="register-form">
+                            <p class="filed">
+                                <label for="username" class="img-username"></label>
+                                <input type="text" placeholder="Username" id="username" class="register-field">
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filed">
+                                <label for="register-email" class="img-email"></label>
+                                <input type="email" placeholder="E-mail" id="register-email" class="email-field">
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filed">
+                                <label for="register-password" class="img-password"></label>
+                                <input placeholder="Password" type="password" class="password-filed-register" id="register-password">
+                                <button class="password-toggle">show</button>
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filedset-aside">
+                                <input type="checkbox" class="remember-me" id="register-remember-check">
+                                <label for="register-remember-check">I agree to the <span>Terms</span></label>
+                            </p>
+                            <p class="filed wrapper-btn-register">
+                                <input class="btn-register" type="submit" value="CREATE ACCOUNT">
+                            </p>
+                        </form>                  
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="page-scroller">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+        
         <section class="section-container-default section-one">
             <video class="video-slide active" src="./assets/images/Cozy - 106674.mp4" autoplay muted loop></video>
             <video class="video-slide" src="./assets/images/Fireplace - 1971.mp4" autoplay muted loop></video>
@@ -243,6 +360,74 @@
                 </div>
             </div>
         </section>
+
+        <section class="section-five"></section>
+
+        <section class="section-six counter-section">
+            <div class="section-counter-wrapper flex-container">
+                <div class="clients">
+                    <h3>2500</h3>
+                    <div>Clients</div>
+                </div>
+                <div class="booking">
+                    <h3>3055</h3>
+                    <div>booking</div>
+                </div>
+                <div class="swimming">
+                    <h3>50</h3>
+                    <div>swimming</div>
+                </div>
+                <div class="apartment">
+                    <h3>1530</h3>
+                    <div>apartment</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-wrapper flex-container">
+                    <div class="footer-item-top flex-container">
+                        <div class="footer-first">
+                            <h2 class="footer-header footer-header-one">About House Rent</h2>
+                            <img src="./assets/images/footer-logo.png" alt="house logo">
+                            <p>We Provide Premium Word Press, Ghost and HTML template.
+                                 Our Perm tritium Templates is, develop gaped in a way
+                                  so that the clients find Support. Themes are developed
+                                   in a way so that the clients find.
+                            </p>
+                            <button class="square-btn">More</button>
+                        </div>
+                        <div class="footer-second">
+                            <h2 class="footer-header footer-header-two">Place Category</h2>
+                            <ul>
+                                <li>Flat for Rent <span>Francis</span></li>
+                                <li>Flat for Rent <span>Collins St</span></li>
+                                <li>Flat for Rent <span>Rose Ln</span></li>
+                                <li>Flat for Rent <span>Cosgrave Ln</span></li>
+                                <li>Flat for Rent <span>Bourke St</span></li>
+                                <li>Flat for Rent <span>Flienders Ln</span></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="footer-last">
+                            <h2 class="footer-header footer-header-three">Instagram Image</h2>
+                            <ul>
+                                <li><img src="./assets/images/instagram/instagram-one.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-two.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-three.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-four.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-five.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-six.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item-bottom">
+                        <h3>Copyright &copy2023 <span>Treasure.Co</span></h3>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <main>
         <section class="container-block"></section>
@@ -437,5 +622,8 @@
       <p class="copyright">Copyright &copy; 2017 <span>HTMLguru</span> </p>
     </footer>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/register.js"></script>
+    <script src="./scripts/logout.js"></script>
 </body>
 </html>

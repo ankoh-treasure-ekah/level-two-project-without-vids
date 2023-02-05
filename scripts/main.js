@@ -1,3 +1,48 @@
+/**
+ * automatic progress bar logic
+ */
+const pageScroll = document.querySelector('.page-scroller');
+const slider = document.querySelector('.filled');
+
+if(window.scrollY > 500) {
+    console.log('true');
+    pageScroll.style.display = 'none';
+}
+
+pageScroll.addEventListener('click', event => {
+    event.preventDefault();
+    console.log('cliced');
+
+    
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    // roller();
+
+    console.log(window.scrollY)
+    
+})
+
+
+
+function mySlider() {
+
+    slider.style.width = `${(window.scrollY / (document.body.offsetHeight - window.innerHeight))*100}%`;
+    requestAnimationFrame(mySlider);
+
+    if(window.scrollY > 900) {
+        console.log('true');
+        pageScroll.classList.add('active');
+    }
+    else {
+        pageScroll.classList.remove('active');
+    }
+
+}
+mySlider();
+
+
 /***
  * Logic for background video swtiching
  */
@@ -436,7 +481,6 @@ const btnRight = document.querySelector('.right-navigate');
 
 btnLeft.addEventListener('click', event => {
     event.preventDefault();
-    console.log('reue');
     carouselWrapper.scroll({
         left: carouselWrapper.scrollLeft + -BoxWidth,
         behavior: "smooth"
@@ -450,3 +494,60 @@ btnRight.addEventListener('click', event => {
         behavior: "smooth"
     });
 })
+
+
+/**
+ * LOGIC FOR LOGIN / REGISTER PAGE HERE
+ */
+
+const btnLog = document.querySelector('.btn-login-register');
+const loginContainer = document.querySelector('.login-container');
+const loginCloser = document.querySelector('.login-closer');
+const btnSignIn = document.querySelector('.btn-sign-up');
+const btnLogin = document.querySelector('.btn-login');
+const registerForm = document.querySelector('.register-form');
+const loginForm = document.querySelector('.login-form');
+
+const userSvg = document.querySelector('.svg-user');
+
+// userSvg.addEventListener('click', event => {
+//     event.preventDefault();
+
+//     if(event.target.classList.contains('active')) {
+//         console.log('added');
+//         userSvg.nextElementSibling.classList.toggle('active');
+//     }
+// })
+
+btnSignIn.addEventListener('click', event => {
+    event.preventDefault();
+    loginForm.classList.remove('active');
+    registerForm.classList.add('active');
+
+    btnLogin.classList.remove('active');
+    event.target.classList.add('active');
+
+})
+
+btnLogin.addEventListener('click', event => {
+    event.preventDefault();
+    loginForm.classList.add('active');
+    registerForm.classList.remove('active');
+
+    event.target.classList.add('active');
+    btnSignIn.classList.remove('active');
+})
+
+
+btnLog.addEventListener('click', event => {
+    event.preventDefault();
+    loginContainer.classList.add('active');
+})
+
+loginCloser.addEventListener('click', event => {
+    event.preventDefault();
+    loginContainer.classList.remove('active');
+})
+
+
+
