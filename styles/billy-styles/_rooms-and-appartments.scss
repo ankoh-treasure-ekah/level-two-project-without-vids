@@ -1,0 +1,140 @@
+div.body-container {
+    section.rooms-and-appartments {
+        background-color: whitesmoke;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        div.banner-and-description {
+            margin-top: 70px;
+            margin-bottom: 50px;
+
+            h1.banner {
+                @include text-style(60px, 700, $playfair);
+                text-align: center;
+                color: #0e385d;
+            }
+
+            p.description {
+                @include text-style(16px, 600, $poppins);
+                color: #0e385d;
+                text-align: center;
+            }
+        }
+
+        div.family-appartment {
+            @include container(80%, 10%);
+            @include display-element-flex(center);
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-self: center;
+            gap: 2%;
+
+
+            div.list-item {
+                width: 32%;
+                background-color: white;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.13);
+
+                div.appartment-photo {
+                    width: 100%;
+                    border-radius: 10px;
+
+                    img {
+                        width: 100%;
+                        border-radius: 5px;
+                    }
+                }
+
+                div.below-wrapper {
+                    div.upper-wrapper {
+                        padding-left: 5%;
+                        padding-bottom: 15px;
+                        padding-top: 10px;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+
+                        h1 {
+                            @include text-style(20px, 600, $poppins);
+                            text-align: left;
+                            color: black;
+                            cursor: pointer;
+                            padding-bottom: 5px;
+                            padding-top: 5px;
+
+                            &:hover {
+                                color: $color-green;
+                            }
+                        }
+
+                        p.heading-description {
+                            @include display-element-flex(center);
+                            gap: 5%;
+
+                            i {
+                                font-size: 20px;
+                                color: rgba(0, 0, 0, 0.288);
+                            }
+
+                            span {
+                                @include text-style(16px, 600, $poppins);
+                                text-align: center;
+                                color: rgba(0, 0, 0, 0.288);
+                            }
+                        }
+                    }
+
+                    div.down-wrapper {
+                        @include container(90%, 5%);
+                        padding-bottom: 15px;
+                        padding-top: 10px;
+
+                        div.two-para {
+                            @include display-element-flex(center);
+                            gap: 4%;
+                            padding-bottom: 15px;
+                            padding-top: 10px;
+
+                            p.bedrooms {
+                                i {
+                                    font-size: 14px;
+                                    color: rgba(0, 0, 0, 0.288);
+                                }
+
+                                span {
+                                    @include text-style(13px, 600, $poppins);
+                                    // text-align: center;
+                                    color: rgba(0, 0, 0, 0.288);
+                                }
+                            }
+                        }
+
+                        div.h1-and-icons {
+                            @include display-element-flex(center);
+                            justify-content: space-between;
+
+                            h1 {
+                                @include text-style(20px, 700, $poppins);
+                                color: rgb(0, 0, 0);
+                            }
+
+                            p.icons {
+                                color: rgba(0, 0, 0, 0.288);
+                                font-size: 16px;
+
+                                i {
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: $color-green;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

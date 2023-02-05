@@ -1706,4 +1706,133 @@ main section.section-four div.background-image div.background-color ul.statistic
   font-weight: 700;
   color: white;
   text-align: center;
+}
+
+div.body-container section.rooms-and-appartments {
+  background-color: whitesmoke;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+div.body-container section.rooms-and-appartments div.banner-and-description {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+div.body-container section.rooms-and-appartments div.banner-and-description h1.banner {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  color: #0e385d;
+}
+div.body-container section.rooms-and-appartments div.banner-and-description p.description {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  color: #0e385d;
+  text-align: center;
+}
+div.body-container section.rooms-and-appartments div.family-appartment {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-self: center;
+  gap: 2%;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item {
+  width: 32%;
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.appartment-photo {
+  width: 100%;
+  border-radius: 10px;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.appartment-photo img {
+  width: 100%;
+  border-radius: 5px;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.upper-wrapper {
+  padding-left: 5%;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.upper-wrapper h1 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  color: black;
+  cursor: pointer;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.upper-wrapper h1:hover {
+  color: #21b360;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.upper-wrapper p.heading-description {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.upper-wrapper p.heading-description i {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.288);
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.upper-wrapper p.heading-description span {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.288);
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.down-wrapper {
+  width: 90%;
+  margin-left: 5%;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.down-wrapper div.two-para {
+  display: flex;
+  align-items: center;
+  gap: 4%;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.down-wrapper div.two-para p.bedrooms i {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.288);
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.down-wrapper div.two-para p.bedrooms span {
+  font-family: "Poppins";
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.288);
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.down-wrapper div.h1-and-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.down-wrapper div.h1-and-icons h1 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.down-wrapper div.h1-and-icons p.icons {
+  color: rgba(0, 0, 0, 0.288);
+  font-size: 16px;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.down-wrapper div.h1-and-icons p.icons i {
+  cursor: pointer;
+}
+div.body-container section.rooms-and-appartments div.family-appartment div.list-item div.below-wrapper div.down-wrapper div.h1-and-icons p.icons i:hover {
+  color: #21b360;
 }/*# sourceMappingURL=style.css.map */
