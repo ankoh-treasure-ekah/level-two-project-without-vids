@@ -1,0 +1,102 @@
+footer{
+    section.footer-upper{
+        @include container(80%,10%);
+        @include display-element-flex(null);
+        margin-bottom: 30px;
+        justify-content: space-between;
+        gap: 2%;
+        div.footer-elements{
+            width:30%;
+            h1.footer-heading{
+                @include text-style(22px,700px,$playfair);
+                color: $color-orange;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+                padding: 0px 0px 10px 0px;
+                margin: 0;
+                text-align: left;
+            }
+            .photo-house-rent{
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+           p.heading-description{
+                @include text-style(14px,500px,$poppins);
+                color: $footer-color;
+                line-height: 30px;
+                margin-bottom: 30px;
+           }
+           div.button{
+                button.more{
+                    background-color: $color-orange;
+                    border-radius: 5px;
+                    outline: none;
+                    border: none;
+                    @include text-style(16px,600,$poppins);
+
+                    padding: 10px 40px 10px 40px;
+                    color: $bg-color;
+
+                    &:hover{
+                        background-color: $color-green;
+                    }
+                }
+           }
+           // styles for place category in the footer
+           ul.footer-list{
+                list-style-type: none;
+                margin-top: 30px;
+                li.list-item{
+                    padding: 12px 0px 12px 0px;
+                    @include text-style(16px,600,$poppins);
+                    color: #3a3a3a;
+                    position: relative;
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    span{
+                        a{
+                            text-decoration: none;
+                            color: $color-orange;
+                            &:visited{
+                                color: $color-orange;
+                            }
+                        }
+                    }
+                    &::before{
+                        content: "";
+                        width: 20px;
+                        height: 2px;
+                        background-color:#77777773;
+                        left: 4px;
+                    }
+                }
+           }
+           //  end of styles for place category in the footer
+           // start of styles for instagram images
+           ul.footer-list-instagram{
+                list-style-type: none;
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 2%;
+                li.list-item{
+                    width: 95%;
+                    
+                }
+           }
+        }
+    }
+    hr{
+        @include container(85%,10%);
+    }
+    p.copyright{
+        text-align: center;
+        @include text-style(14px,600,$poppins);
+        color:#6f6f6f;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        span{
+            color: $color-orange;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+main{
+    section.section-four{
+        margin-top: 40px;
+        margin-bottom: 110px;
+        div.background-image{
+            background-image: url('../../assets/images/count-down-image.png');
+            height: 250px;
+            background-size: cover;
+            div.background-color{
+                background-color: rgba(0, 0, 0, 0.342);
+                height: 100%;
+                ul.statistics-list{
+                    list-style-type: none;
+                    @include display-element-flex(center);
+                    padding: 90px 0px 30px 0px;
+                    @include container(80%,10%);
+                    li{
+                        @include container(20%,2.5%);
+                        @include text-style(40px,700,$poppins);
+                        color: white;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 @import "_reset";
 @import "_variables";
+@import './mixins';
 @import "_header";
 @import "./dashboard/_header";
 @import "./apartment/_header";
@@ -8,3 +9,11 @@
 @import "_section4";
 @import "_section6";
 @import "_footer";
+
+@import './billy-styles/main';
+@import './billy-styles/footer';
+@import './billy-styles/blog-post';
+@import './billy-styles/photo_gallery';
+@import './billy-styles/section-six';
+@import './billy-styles/section-four';
+@import './billy-styles/rooms-and-appartments';
