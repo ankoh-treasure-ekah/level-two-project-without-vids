@@ -1,0 +1,56 @@
+section.section-five {
+    @include display-element-flex(null);
+
+    ul.photo-gallery {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        list-style-type: none;
+        gap: 1.5%;
+
+        li.image-list {
+            width: 75%;
+        }
+    }
+
+    div.gallery-right-hand {
+        @include container(30%, 5%);
+
+        h1 {
+            @include text-style(60px, 700, $playfair);
+            text-align: left;
+            width: 75%;
+            color: #0e385d;
+        }
+
+        h3 {
+            @include text-style(25px, 600, $poppins);
+            text-align: left;
+            color: #525252;
+            width: 60%;
+            line-height: 35px;
+            padding: 20px 0px 20px 0px;
+        }
+
+        p {
+            @include text-style(16px, 500, $poppins);
+            color: #525252;
+            line-height: 35px;
+            padding: 20px 0px 20px 0px;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            background-color: #0e385d;
+            @include text-style(16px, 600, $poppins);
+            color: white;
+            padding: 15px 40px 15px 40px;
+            border-radius: 50px;
+            margin-top: 10px;
+
+            &:hover {
+                background-color: $color-green;
+            }
+        }
+    }
+}

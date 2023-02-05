@@ -1,0 +1,100 @@
+main {
+    section.blog-post {
+        background-color: whitesmoke;
+        padding-bottom: 50px;
+        h1.banner{
+            @include text-style(60px,700,$playfair);
+            color: #0e385d;
+            text-align: center;
+        }
+        p.heading-description{
+            text-align: center;
+            @include text-style(16px,600,$poppins);
+            color: #0e385d;
+        }
+        div.blog-holder {
+            @include display-element-flex(center);
+            justify-content: space-between;
+            gap: 2%;
+            @include container(90%, 7%);
+
+            div.best-places-to-visit {
+                width: 32%;
+                background-color: white;
+                border-radius: 5px;
+
+                div.photo {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                div.h1-ul-p {
+                    @include container(90%,5%);
+                    p.date-and-type {
+                        @include text-style(13px, 600, $poppins);
+                        color: #9a9a9a;
+                        padding-top: 18px;
+
+                        span {
+                            border-left: 2px solid #9a9a9a;
+                            margin-left: 15px;
+
+                            a {
+                                text-decoration: none;
+                                @include text-style(13px, 600, $poppins);
+                                color: #9a9a9a;
+                                padding-left: 15px;
+                                word-spacing: 2px;
+                            }
+                        }
+                    }
+
+                    h1 {
+                        @include text-style(20px, 800, $poppins);
+                        color: #292928;
+                        padding: 15px 0px 20px 0px;
+                        text-align: left;
+                    }
+
+                    ul {
+                        @include display-element-flex(center);
+                        gap: 10px;
+                        list-style-type: none;
+                        border-top: 1px solid rgba(0, 0, 0, 0.267);
+                        padding-top: 15px;
+                        padding-bottom: 20px;
+                        li{
+                            @include text-style(13px, 400, $poppins);
+                            i.fa-eye{
+                                color: rgba(0, 0, 0, 0.267);;
+                            }
+                            i.fa-heart{
+                                color: skyblue;
+                            }
+                            i.fa-message{
+                                color: limegreen;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            outline: none;
+            border: none;
+            background-color: $color-orange;
+            @include text-style(16px,600,$poppins);
+            color: white;
+            padding: 10px 50px 10px 50px;
+            margin-left: 45%;
+            border-radius: 5px;
+            margin-top: 60px;
+            &:hover{
+                background-color: $color-green;
+            }
+        }
+    }
+}

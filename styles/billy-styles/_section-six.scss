@@ -1,0 +1,57 @@
+main{
+    section.section-six{
+        margin-top: 120px;
+        div.background-image{
+            height: 250px;
+            background-image: url('../../assets/images/contact-bg-image.png');
+            background-size: cover;
+            div.background-color{
+                background-color: rgba(0, 0, 0, 0.274);
+                height: 100%;
+                div.contact-list{
+                    @include container(80%,10%);
+                    @include display-element-flex(center);
+                    justify-content: space-between;
+                    padding-top: 70px;
+                    padding-bottom: 70px;
+                    p{
+                        @include text-style(30px,700,$poppins);
+                        color: white;
+                        span{
+                            color: $color-orange;
+                            @include text-style(20px,700,$poppins);
+                        }
+                    }
+                    div.email-phone-num{
+                        p.phone-num{
+                            a{
+                                text-decoration: none;
+                                color: white;
+
+                            }
+                        }
+                        p.email{
+                            a{
+                                text-decoration: none;
+                                color: white;
+                            }
+                        }
+                        button{
+                            outline: none;
+                            border: none;
+                            background-color: $color-orange;
+                            @include text-style(16px,600,$poppins);
+                            color: white;
+                            padding: 10px 30px 10px 30px;
+                            border-radius: 5px;
+                            margin-top: 0px;
+                            &:hover{
+                                background-color: $color-green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
